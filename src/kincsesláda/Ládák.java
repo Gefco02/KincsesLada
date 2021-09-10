@@ -10,13 +10,38 @@ package kincsesláda;
  * @author hallgato
  */
 public class Ládák {
-    private String nev;
-    private String mondas;
-    
-    Ládák(String nev, String mondas){
-    this.nev=nev;
-    this.mondas=mondas;
+
+    private final String nev;
+    private final String mondas;
+    private final boolean igaz;
+    private final boolean ebben;
+
+    Ládák(String nev, String mondas, boolean ebben, boolean igaz) {
+        this.nev = nev;
+        this.mondas = mondas;
+        this.ebben = ebben;
+        this.igaz = igaz;
     }
-    
-    
+
+    public boolean isEbben() {
+        return ebben;
+    }
+
+    public boolean isIgaz() {
+        return igaz;
+    }
+
+    public String getNev() {
+        return nev;
+    }
+
+    public String getMondas() {
+        return mondas;
+    }
+
+    @Override
+    public String toString() {
+        return this.getNev()+"\n"+this.mondas+"\n";
+    }
+
 }
